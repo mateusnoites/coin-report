@@ -1,25 +1,21 @@
-[project]
+[tool.poetry]
 name = "coin-report"
 version = "0.1.0"
 description = ""
-authors = [
-    {name = "Mateus Dias",email = "mateusdias1409@gmail.com"}
-]
-readme = "README.md"
-requires-python = ">=3.11, <4.0"
-dependencies = [
-    "requests (>=2.32.5,<3.0.0)",
-    "taskipy (>=1.14.1,<2.0.0)",
-    "resend (>=2.19.0,<3.0.0)",
-    "python-dotenv (>=1.2.1,<2.0.0)"
-]
+authors = ["Mateus Dias <mateusdias1409@gmail.com>"]
 
-[tool.poetry]
-packages = [{include = "coin_report", from = "src"}]
+packages = [{ include = "coin_report", from = "src" }]
 
-[build-system]
-requires = ["poetry-core>=2.0.0,<3.0.0"]
-build-backend = "poetry.core.masonry.api"
+[tool.poetry.dependencies]
+python = ">=3.11,<4.0"
+requests = "^2.32.5"
+taskipy = "^1.14.1"
+resend = "^2.19.0"
+python-dotenv = "^1.2.1"
 
 [tool.taskipy.tasks]
 run = "python src/coin_report/app.py"
+
+[build-system]
+requires = ["poetry-core>=1.4.0"]
+build-backend = "poetry.core.masonry.api"
