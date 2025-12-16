@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+
+        header {{
+            width: 100%;
+            margin: auto;
+            font-size: 22pt;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color:rgb(133, 142, 199);
+            color:rgb(247, 248, 255);
+            height: 80px;
+        }}
+
+        p {{
+            text-align: left;
+            font-family: "Merriweather", serif;
+            font-weight: bolder;
+            letter-spacing: -2px;
+        }}
+
+        footer {{
+            background-color:rgb(112, 119, 167);
+            color: white;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }}
+
+        footer p {{
+            text-align: center;
+            letter-spacing: 0;
+        }}
+
+        footer p a {{
+            color:rgb(159, 209, 255);
+        }}
+
+        body {{
+            font-family: "Geist", sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }}
+
+        .caixa-status-alta {{
+            background-color: rgb(103, 206, 103);
+            padding: 0 8px;
+            color: rgb(37, 78, 37);
+            margin-right: 2px;
+            border-radius: 4px;
+        }}
+
+        .caixa-status-queda {{
+            background-color: rgb(206, 103, 103);
+            padding: 0 8px;
+            color: rgb(78, 37, 37);
+            margin-right: 2px;
+            border-radius: 4px;
+        }}
+
+        .valores-container {{
+            border: 1.5px solid black;
+            background-color: rgb(133, 142, 199);
+            margin: auto;
+            border-collapse: collapse;
+            color: rgb(247, 248, 255);
+            font-weight: bold;
+            cursor: default;
+        }}
+
+        .valores-container tr, td {{
+            border: 1.5px solid black;
+        }}
+
+        .valores-container td {{
+            padding: 10px;
+        }}
+
+        .valores-container td:hover {{
+            background-color: #777fb0;
+        }}
+
+        td:first-child {{
+            text-align: left;
+        }}
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <p>
+            COIN REPORT 💸
+        </p>
+    </header>
+
+    <h2>O bitcoin está em <span class="caixa-status-{condicao}">{condicao}</span>! {emoji_status}</h2>
+
+    <table class="valores-container">
+        <tr>
+            <td>VALOR ATUAL</td>
+            <td>R$ {preco_atual}</td>
+        </tr>
+        <tr>
+            <td>VALOR HÁ 24 HORAS</td>
+            <td>R$ {preco_ontem}</td>
+        </tr>
+    </table>
+
+    <h2>{emoji_seta}<span class="caixa-status-{condicao}">{condicao_titulo}</span> de {porcentagem}%!</h2>
+
+    <footer>
+        <p>Desenvolvido por <a href="https://github.com/mateusnoites">@mateusnoites</a></p>
+    </footer>
+</body>
+</html>
