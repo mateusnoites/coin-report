@@ -1,5 +1,9 @@
 [build]
 builder = "NIXPACKS"
 
+[build.env]
+POETRY_VIRTUALENVS_CREATE = "true"
+POETRY_VIRTUALENVS_IN_PROJECT = "false"
+
 [deploy]
-startCommand = "poetry run task run"
+startCommand = "poetry install --no-interaction --no-ansi && poetry run task run"
