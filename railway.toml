@@ -2,7 +2,7 @@
 builder = "NIXPACKS"
 
 [deploy]
-startCommand = "task run"
+startCommand = "poetry run task run"
 
 [build.env]
 POETRY_VIRTUALENVS_CREATE = "false"
